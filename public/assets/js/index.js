@@ -30,8 +30,13 @@ const getNotes = () =>
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-    },
-  });
+    }})
+    .then(response => {
+      if (response.ok) {
+        return response;
+      }
+      console.log(`Error: ${response.statusText}`);
+    });
 
 const saveNote = (note) =>
   fetch('/api/notes', {
