@@ -1,8 +1,39 @@
 {
-    "notes": [
-        {
-            "title": "Test Title",
-            "text": "Test text"
-        }
-    ]
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "0"
+    },
+    {
+      "title": "Blueberry",
+      "text": "Blueberry Test text",
+      "id": "1"
+    },
+    {
+      "title": "Strawberry",
+      "text": "Strawberry Test text",
+      "id": "2"
+    },
+    {
+      "title": "asdasdasd",
+      "text": "asdasdasdasd",
+      "id": "3"
+    },
+    {
+      "title": "asd",
+      "text": "asd",
+      "id": "4"
+    },
+    {
+      "title": "Testststststs",
+      "text": "Waffle\n",
+      "id": "5"
+    },
+    {
+      "title": "Banana",
+      "text": "Banananannannannannannanaanana",
+      "id": "6"
+    }
+  ]
 }

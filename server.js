@@ -27,7 +27,14 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-app.post('/api/notes', (req, res) => {});
+app.post('/api/notes', (req, res) => {
+    req.body.id = notes.length.toString();
+    const note = req.body;
+    notes.push(note);
+    fs.writeFileSync(path.join(__dirname, './db/db.json'),
+        JSON.stringify({ notes: notes }, null, 2));
+    res.json(note);
+});
 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
