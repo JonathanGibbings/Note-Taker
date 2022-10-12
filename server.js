@@ -36,6 +36,13 @@ app.post('/api/notes', (req, res) => {
     res.json(note);
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+    let id = req.params.id;
+    notes.splice(id, 1);
+    notes.forEach(note => {note.id = JSON.stringify(notes.indexOf(note))});
+    res.json(notes);
+});
+
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 });
